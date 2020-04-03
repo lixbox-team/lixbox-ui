@@ -288,7 +288,7 @@ public class DataTableRenderer extends CoreRenderer
         writer.startElement("tr", null);
         for (UIColumn column : table.getColumns())
         {
-            encodeColumnHeader(context, (UIColumn) column);
+            encodeColumnHeader(context, column);
         }
         writer.endElement("tr");
         writer.endElement("thead");
@@ -365,7 +365,7 @@ public class DataTableRenderer extends CoreRenderer
         writer.startElement("tr", null);
         for (UIColumn column : table.getColumns())
         {
-            encodeColumnFooter(context, (UIColumn) column);
+            encodeColumnFooter(context, column);
         }
         writer.endElement("tr");
         writer.endElement("tfoot");        
