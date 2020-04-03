@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facelet-taglib version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facelettaglibrary_2_2.xsd">
+	<namespace>http://www.lixbox.fr/functions</namespace>
+	
+	<function>
+		<function-name>component</function-name>
+		<function-class>fr.lixbox.ui.faces.util.ComponentUtils</function-class>
+		<function-signature>java.lang.String findComponentClientId(java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<function-name>ifGranted</function-name>
+		<function-class>fr.lixbox.ui.faces.util.SecurityUtils</function-class>
+		<function-signature>java.lang.Boolean ifGranted(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<function-name>ifAllGranted</function-name>
+		<function-class>fr.lixbox.ui.faces.util.SecurityUtils</function-class>
+		<function-signature>java.lang.Boolean ifAllGranted(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<function-name>ifAnyGranted</function-name>
+		<function-class>fr.lixbox.ui.faces.util.SecurityUtils</function-class>
+		<function-signature>java.lang.Boolean ifAnyGranted(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<function-name>ifNoneGranted</function-name>
+		<function-class>fr.lixbox.ui.faces.util.SecurityUtils</function-class>
+		<function-signature>java.lang.Boolean ifNoneGranted(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<function-name>remoteUser</function-name>
+		<function-class>fr.lixbox.ui.faces.util.SecurityUtils</function-class>
+		<function-signature>java.lang.String remoteUser()</function-signature>
+	</function>
+	
+    <function>
+		<function-name>userPrincipal</function-name>
+		<function-class>fr.lixbox.ui.faces.util.SecurityUtils</function-class>
+		<function-signature>java.security.Principal userPrincipal()</function-signature>
+	</function>
+</facelet-taglib>

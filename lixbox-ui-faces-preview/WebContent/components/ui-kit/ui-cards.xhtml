@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html 
+    xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:h="http://java.sun.com/jsf/html" 
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:c="http://java.sun.com/jsp/jstl/core" 
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" 
+    xmlns:jsf="http://xmlns.jcp.org/jsf"  
+      xmlns:card="http://www.lixbox.fr/card"   
+      xmlns:grid="http://www.lixbox.fr/grid"
+      xmlns:layout="http://www.lixbox.fr/layout"
+      xmlns:out="http://www.lixbox.fr/output"
+      xmlns:graphic="http://www.lixbox.fr/graphic"
+      xmlns:widget="http://www.lixbox.fr/widget"
+    lang="#{i18n.language}">
+    <h:head>        
+    </h:head>
+<h:body>
+    <ui:composition template="/layouts/collapsed-layout.xhtml">
+    <ui:define name="content">
+        <grid:row>
+           <grid:col>
+               <div class="page-title-box">
+                   <div class="page-title-right">
+                       <ol class="breadcrumb m-0">
+                           <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                           <li class="breadcrumb-item"><a href="javascript: void(0);">UI Kit</a></li>
+                           <li class="breadcrumb-item active">Cards</li>
+                       </ol>
+                   </div>
+                   <h4 class="page-title">Cards</h4>
+               </div>
+           </grid:col>           
+        </grid:row>
+        <grid:row>
+            <grid:col medium="6" large="3">            
+                <!-- Simple card -->
+                <card:card closible="true" refreshible="true" refreshAction="#{helloBean.refreshMessage}">
+                    <graphic:image library="images" name="small/small-1.jpg" alt="Card image cap" title="Card image cap title"/>
+                    <card:body title="Card title with no header">
+                        <p class="card-text">Some quick example text to build on the card title and make
+                            up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
+                        <a href="javascript: void(0);" class="btn btn-primary">Button</a>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="6" large="3">
+                <card:card closible="true" collapsible="true">                    
+                    <graphic:image library="images" name="small/small-2.jpg" alt="Card image cap" title="Card image cap title"/>
+                    <card:header>Quote</card:header>
+                    <card:body title="Card title with header">
+                        <p class="card-text">Some quick example text to build on the card..</p>
+                    </card:body>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                    </ul>
+                    <card:body>
+                        <a href="javascript: void(0);" class="card-link text-custom">Card link</a>
+                        <a href="javascript: void(0);" class="card-link text-custom">Another link</a>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="6" large="3">
+                <card:card>
+                    <graphic:image library="images" name="small/small-3.jpg" alt="Card image cap" title="Card image cap title"/>
+                    <card:body>
+                        <p class="card-text">Some quick example text to build on the card title and make
+                            up the bulk of the card's content. Some quick example text to build on the card title and make up.</p>
+                        <a href="javascript: void(0);" class="btn btn-primary">Button</a>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+
+            <grid:col medium="6" large="3">
+                <card:card closible="true" collapsible="true">
+                    <card:body title="Card title" subtitle="Support card subtitle"/>
+                    <graphic:image library="images" name="small/small-5.jpg" alt="Card image cap" title="Card image cap title"/>
+                    <card:body title="Card title with dual body">
+                        <p class="card-text">Some quick example text to build on the card title and make
+                            up the bulk of the card's content.</p>
+                    </card:body>
+                    <card:body>
+                        <p class="card-text">Some quick example text to build on the card title and make
+                            up the bulk of the card's content.</p>
+                    </card:body>
+                </card:card>
+            </grid:col>
+        </grid:row>
+
+        <grid:row>
+            <grid:col small="4">
+                <card:card collapsible="true" collapsed="true">
+                    <card:body title="Special title treatment">
+	                    <p class="card-text">With supporting text below as a natural lead-in to additional
+	                        content.</p>
+	                    <a href="javascript: void(0);" class="btn btn-primary">Go somewhere</a>
+                    </card:body>
+                </card:card>
+            </grid:col>
+            <grid:col small="4">
+                 <card:card>
+                    <card:body title="Special title treatment">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional
+                        content.</p>
+                    <a href="javascript: void(0);" class="btn btn-primary">Go somewhere</a>
+                    </card:body>
+                </card:card>
+            </grid:col>
+            <grid:col small="4">
+                 <card:card>
+                    <card:body title="Special title treatment">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional
+                        content.</p>
+                    <a href="javascript: void(0);" class="btn btn-primary">Go somewhere</a>
+                    </card:body>
+                </card:card>
+            </grid:col>
+        </grid:row>
+
+        <grid:row>
+            <grid:col medium="4">
+                 <card:card>
+                    <card:header styleClass="alert-info">try Featured</card:header>
+                    <card:body title="Special title treatment">
+                        <p class="card-text">With supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="javascript: void(0);" class="btn btn-primary">Go somewhere</a>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="4">
+                <card:card>
+                    <card:header>Quote</card:header>
+                    <card:body>
+                        <blockquote class="card-bodyquote">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                erat a ante.</p>
+                            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="4">
+                <card:card styleClass="text-xs-center">
+                    <card:header>Featured</card:header>
+                    <card:body>
+                        <a href="javascript: void(0);" class="btn btn-primary">Go somewhere</a>
+                    </card:body>
+                    <card:footer>2 days ago</card:footer>
+                </card:card>
+            </grid:col>
+        </grid:row>
+
+        <grid:row>
+            <grid:col>
+                <h4 class="mb-4">Card Colored</h4>
+            </grid:col>
+        </grid:row>
+
+        <grid:row>
+            <grid:col medium="4">
+                <card:card styleClass="bg-dark text-white">
+                    <card:body title="Special title treatment">
+                        <p class="card-text">With supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="javascript: void(0);" class="btn btn-primary btn-sm">Button</a>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="4">
+                <card:card styleClass="text-white bg-primary text-xs-center">
+                    <card:body>
+                        <blockquote class="card-bodyquote">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
+                                erat a ante.</p>
+                            <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                        </blockquote>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="4">
+				<card:card styleClass="text-white">
+				  <graphic:image styleClass="card-img" style="opacity:0.25;" library="images" name="small/small-5.jpg" alt="Card image cap" title="Card image cap title"/>
+				  <card:body title="Card title" imgOverlay="true">
+				    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				    <p class="card-text">Last updated 3 mins ago</p>
+				  </card:body>
+				</card:card>
+            </grid:col> <!-- end col-->
+        </grid:row>
+
+        <grid:row>
+            <grid:col>
+                <h4 class="mb-4">Card Group</h4>
+            </grid:col> <!-- end col -->
+        </grid:row>
+        
+        <grid:row>
+            <grid:col>
+                <card:group>
+                    <card:card>
+                        <graphic:image styleClass="pipo" library="images" name="small/small-1.jpg" alt="Card image cap" title="Card image cap title"/>
+                        <card:body title="Card title">
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is a little bit
+                                longer.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </card:body>
+                    </card:card>
+                    <card:card>
+                        <graphic:image styleClass="pipo" library="images" name="small/small-2.jpg" alt="Card image cap" title="Card image cap title"/>
+                        <card:body title="Card title">
+                            <p class="card-text">This card has supporting text below as a natural
+                                lead-in to additional content.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </card:body>
+                    </card:card>
+                    <card:card>
+                        <graphic:image styleClass="pipo" library="images" name="small/small-3.jpg" alt="Card image cap" title="Card image cap title"/>
+                        <card:body title="Card title">
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This card has even longer content
+                                than the first to show that equal height action.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </card:body>
+                    </card:card>
+                </card:group>
+            </grid:col>
+        </grid:row>
+
+        <grid:row>
+            <grid:col>
+                <h4 class="mb-4 mt-4">Card Decks</h4>
+            </grid:col> <!-- end col -->
+        </grid:row>
+
+        <grid:row>
+            <grid:col>
+                <card:group type="deck">
+                    <card:card>
+                        <graphic:image styleClass="pipo" library="images" name="small/small-4.jpg" alt="Card image cap" title="Card image cap title"/>
+                        <card:body title="Card title">
+                            <p class="card-text">This is a longer card with supporting text below as
+                                a natural lead-in to additional content. This content is a little
+                                bit longer.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </card:body>
+                    </card:card>
+                    <card:card>
+                        <graphic:image styleClass="pipo" library="images" name="small/small-1.jpg" alt="Card image cap" title="Card image cap title"/>
+                        <card:body title="Card title">
+                            <p class="card-text">This card has supporting text below as a natural
+                                lead-in to additional content.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </card:body>
+                    </card:card>
+                    <card:card>
+                        <graphic:image styleClass="pipo" library="images" name="small/small-2.jpg" alt="Card image cap" title="Card image cap title"/>
+                        <card:body title="Card title">
+                            <p class="card-text">This is a wider card with supporting text below as
+                                a natural lead-in to additional content. This card has even longer
+                                content than the first to show that equal height action.</p>
+                            <p class="card-text">
+                                <small class="text-muted">Last updated 3 mins ago</small>
+                            </p>
+                        </card:body>
+                    </card:card>
+                </card:group>
+            </grid:col>
+        </grid:row>
+        
+        <grid:row>
+            <grid:col>
+                <h4 class="mb-4 mt-4">Custom Card Portlets</h4>
+            </grid:col> <!-- end col -->
+        </grid:row>
+
+        <grid:row>
+            <grid:col medium="4">
+                <!-- Portlet card -->
+                <card:card closible="true" refreshible="true" collapsible="true">
+                    <graphic:image library="images" name="small/small-2.jpg" alt="Card image cap" title="Card image cap title"/>
+                    <card:body title="Card title">
+                        <div id="asacardCollpase1" class="collapse pt-3 show">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                            put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                            labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                            beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                            VHS.
+                        </div>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="4">
+                <!-- Portlet card -->
+                <card:card styleClass="bg-primary text-white" refreshible="true" collapsible="true">
+                	<card:header styleClass="bg-primary">Hello boys!</card:header>
+                    <card:body title="Card title">
+                        <div id="cardCollpase2" class="collapse pt-3 show">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                            put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                            labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                            beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                            VHS.
+                        </div>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="4">
+                <!-- Portlet card -->
+                <card:card styleClass="bg-success text-white" refreshible="true" refreshAction="#{helloBean.refreshMessage}">
+                    <graphic:image library="images" name="small/small-2.jpg" alt="Card image cap" title="Card image cap title"/>
+                	<card:header styleClass="bg-success">#{helloBean.message}</card:header>
+                    <card:body title="Card title">
+                        <div id="cardCollpase3" class="collapse pt-3 show">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                            put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                            labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                            beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable
+                            VHS.
+                        </div>
+                    </card:body>
+                </card:card>
+            </grid:col>
+        </grid:row>
+    </ui:define>        
+    </ui:composition>
+</h:body>
+</html>

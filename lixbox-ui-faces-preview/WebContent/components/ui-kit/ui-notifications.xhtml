@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html 
+    xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:h="http://java.sun.com/jsf/html" 
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:c="http://java.sun.com/jsp/jstl/core" 
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" 
+    xmlns:jsf="http://xmlns.jcp.org/jsf"     
+      xmlns:card="http://www.lixbox.fr/card" 
+      xmlns:layout="http://www.lixbox.fr/layout"
+      xmlns:grid="http://www.lixbox.fr/grid"
+      xmlns:widget="http://www.lixbox.fr/widget"
+    lang="#{i18n.language}">
+    <h:head>        
+    </h:head>
+    
+<h:body>
+    <ui:composition template="/layouts/collapsed-layout.xhtml">
+        <ui:define name="content">
+        <grid:row>
+           <grid:col>
+               <div class="page-title-box">
+                   <div class="page-title-right">
+                       <ol class="breadcrumb m-0">
+                           <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                           <li class="breadcrumb-item"><a href="javascript: void(0);">UI Kit</a></li>
+                           <li class="breadcrumb-item active">Notifications</li>
+                       </ol>
+                   </div>
+                   <h4 class="page-title">Notifications</h4>
+               </div>
+           </grid:col>           
+        </grid:row>
+        
+
+        <grid:row>
+            <grid:col>
+                <card:card>
+                    <card:body title="Jquery Toast">
+                        <p class="text-muted font-14 mb-3">
+                            Toasts based notifications can be used to to show important alerts or information to users.
+                        </p>
+                        <grid:row>
+                            <grid:col medium="3">
+                                <div class="text-center p-3">
+                                    <p>Info Example</p>
+                                    <h:outputScript>
+                                    	jQuery("#toastr-one").each( function() {
+										    alert("Your book is overdue.");
+										});
+                                    </h:outputScript>
+                                    <h:button id="toastr-one" class="btn btn-info btn-sm" value="Try to Hover me" onclick="javascript:none">
+                                        <widget:grow level="info" position="top-right" 
+                                        title="Heads up!" 
+                                        description="This alert needs your attention, but it is not super important by toastr-one1"
+                                        refer_id="toastr-one"
+                                        refer_event="mouseenter"/>
+                                    </h:button>
+                                </div>
+                            </grid:col>
+                            <grid:col medium="3">
+                                <div class="text-center p-3">
+                                    <p>Warning Example</p>
+                                    <h:button id="toastr-two" class="btn btn-warning btn-sm" value="Try to Click me" onclick="javascript:none">
+                                        <widget:grow level="warning" position="top-center" 
+                                        title="Heads up!" 
+                                        description="This alert needs your attention, but it is not super important by toastr-one1"
+                                        refer_id="toastr-two"
+                                        refer_event="click"/>
+                                    </h:button>
+                                </div>
+                            </grid:col>
+                            <grid:col medium="3">
+                                <div class="text-center p-3">
+                                    <p>Success Example</p>
+                                    <h:button id="toastr-three" class="btn btn-success btn-sm" value="Try to DbClick me" onclick="javascript:none">
+                                        <widget:grow level="success" position="bottom-right" 
+                                        title="Heads up!" 
+                                        description="This alert needs your attention, but it is not super important by toastr-one1"
+                                        refer_id="toastr-three"
+                                        refer_event="dblclick"/>
+                                    </h:button>
+                                </div>
+                            </grid:col>
+                            <grid:col medium="3">
+                                <div class="text-center p-3">
+                                    <p>Danger Example</p>
+                                    <h:button id="toastr-four" class="btn btn-danger btn-sm" value="Try to Click me" onclick="javascript:none">
+                                        <widget:grow level="error" position="bottom-left" 
+                                        title="Heads up!" 
+                                        description="This alert needs your attention, but it is not super important by toastr-one1"
+                                        refer_id="toastr-four"
+                                        refer_event="click"/>
+                                    </h:button>
+                                </div>
+                            </grid:col>
+                        </grid:row>
+
+                        <grid:row>
+                            <grid:col medium="3">
+                                <div class="text-center p-3">
+                                    <p>The text can be an array</p>
+                                    <h:button id="toastr-five" class="btn btn-success btn-sm" value="Try to Click me" onclick="javascript:none">
+                                        <widget:grow level="info" position="top-right" 
+                                        title="Heads up!" 
+                                        description="This alert needs your attention, but it is not super important by toastr-one1"
+                                        refer_id="toastr-five"
+                                        refer_event="click"/>
+                                    </h:button>
+                                </div>
+                            </grid:col>
+                            <grid:col medium="3">
+                                <div class="text-center p-3">
+                                    <p>Put some HTML in the text</p>
+                                    <h:button id="toastr-six" class="btn btn-success btn-sm" value="Try to Click me" onclick="javascript:none">
+                                        <widget:grow level="info" position="top-right" 
+                                        title="Heads up!" 
+                                        description="This alert needs your attention, but it is not super important by toastr-one1"
+                                        refer_id="toastr-six"
+                                        refer_event="click"/>
+                                    </h:button>
+                                </div>
+                            </grid:col>
+                            <grid:col medium="3">
+                                <div class="text-center p-3">
+                                    <p>Making them sticky</p>
+                                    <h:button id="toastr-seven" class="btn btn-light btn-sm" value="Try to Click me" onclick="javascript:none">
+                                        <widget:grow level="success" position="top-right" 
+                                        title="Heads up!" 
+                                        description="This alert needs your attention, but it is not super important by toastr-one1"
+                                        refer_id="toastr-seven"
+                                        refer_event="click"/>
+                                    </h:button>
+                                </div>
+                            </grid:col>
+                            <grid:col medium="3">
+                                <div class="text-center p-3">
+                                    <p>Fade transitions</p>
+                                    <h:button id="toastr-eight" class="btn btn-light btn-sm" value="Try to Click me" onclick="javascript:none">
+                                        <widget:grow level="info" position="top-right" 
+                                        title="Heads up!" 
+                                        description="This alert needs your attention, but it is not super important by toastr-one1"
+                                        refer_id="toastr-eight"
+                                        refer_event="click"/>
+                                    </h:button>
+                                </div>
+                            </grid:col>
+                        </grid:row>
+                    </card:body>
+                </card:card>
+            </grid:col>      
+        </grid:row>
+
+      
+        <grid:row>
+            <grid:col medium="6">
+                <card:card>
+                    <card:body title="Default Alert">
+                        <p class="text-muted font-14 mb-3">
+                            Alerts are available for any length of text, as well as an optional dismiss button. For the outline alert add
+                            <code>outline-</code> in level attribute.
+                        </p>
+                        <widget:alert level="primary">
+                            <strong>Primary - </strong> A simple primary alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="secondary">
+                            <strong>Secondary - </strong> A simple secondary alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="success">
+                            <strong>Success - </strong> A simple success alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="danger">
+                            <strong>Error - </strong> A simple danger alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="warning">
+                            <strong>Warning - </strong> A simple warning alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="info">
+                            <strong>Info - </strong> A simple info alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="light">
+                            <strong>Light - </strong> A simple light alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="dark">
+                            <strong>Dark - </strong> A simple dark alert—check it out!
+                        </widget:alert>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col>
+                <card:card>
+                    <card:body title="Dismissing Alerts">
+                        <p class="text-muted font-14 mb-3">
+                            Add a dismiss button and the <code>dismissible="true"</code> attribute, which adds extra padding to the right of the alert
+                            and positions the <code>.close</code> button.
+                        </p>
+
+                        <widget:alert level="outline-primary" dismissible="true">
+                            <strong>Primary - </strong> A simple primary alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="outline-secondary" dismissible="true">
+                            <strong>Secondary - </strong> A simple secondary alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="outline-success" dismissible="true">
+                            <strong>Success - </strong> A simple success alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="outline-danger" dismissible="true">
+                            <strong>Error - </strong> A simple danger alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="outline-warning" dismissible="true">
+                            <strong>Warning - </strong> A simple warning alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="outline-info" dismissible="true">
+                            <strong>Info - </strong> A simple info alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="outline-light" dismissible="true">
+                            <strong>Light - </strong> A simple light alert—check it out!
+                        </widget:alert>
+                        <widget:alert level="outline-dark" dismissible="true">
+                            <strong>Dark - </strong> A simple dark alert—check it out!
+                        </widget:alert>
+                    </card:body>
+                </card:card>
+            </grid:col>      
+        </grid:row>
+      
+        <grid:row>
+            <grid:col medium="6">
+                <card:card>
+                    <card:body title="Custom Alerts">
+                        <p class="text-muted font-14 mb-3">
+                            Display alert with transparent background and with contextual text color. Use classes
+                            <code>.bg-white</code>, and <code>.text-*</code>. E.g. <code>bg-white text-primary</code> 
+                            in the styleClass attribute. Enforce alert with the <code>hardAlert="true"</code> attribute 
+                        </p>
+
+                        <widget:alert level="outline-primary" styleClass="bg-white text-primary">
+                            This is a <strong>primary</strong> alert—check it out!
+                        </widget:alert>
+
+                        <p class="text-muted font-14 mb-2 mt-3">
+                            Display alert with filled background. Use classes
+                                <code>.bg-*</code>, and <code>.text-white</code>. E.g. <code>bg-success text-white</code>.
+                        </p>
+
+                        <widget:alert level="success">
+                            <i class="dripicons-checkmark mr-2"></i> This is a <strong>success</strong> alert - check it out!
+                        </widget:alert>
+                        <widget:alert level="danger">
+                            <i class="dripicons-wrong mr-2"></i> This is a <strong>danger</strong> alert - check it out!
+                        </widget:alert>
+                        <widget:alert level="warning" hardAlert="true">
+                            <i class="dripicons-warning mr-2"></i> This is a <strong>enforced warning</strong> alert - check it out!
+                        </widget:alert>
+                        <widget:alert level="info">
+                            <i class="dripicons-information mr-2"></i> This is a <strong>info</strong> alert - check it out!
+                        </widget:alert>
+                    </card:body>
+                </card:card>
+            </grid:col>
+
+            <grid:col medium="6">
+                <card:card>
+                    <card:body title="Additional content">
+                        <p class="text-muted font-14 mb-3">
+                            Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+                        </p>
+
+                        <widget:alert level="success">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                            <hr/>
+                            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                        </widget:alert>
+                        
+                    </card:body>
+                </card:card>
+            </grid:col>      
+        </grid:row>
+        </ui:define>        
+    </ui:composition>
+</h:body>
+</html>

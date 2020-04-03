@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html 
+    xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:h="http://java.sun.com/jsf/html" 
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:c="http://java.sun.com/jsp/jstl/core" 
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" 
+    xmlns:jsf="http://xmlns.jcp.org/jsf"  
+      xmlns:card="http://www.lixbox.fr/card"   
+      xmlns:grid="http://www.lixbox.fr/grid"
+      xmlns:layout="http://www.lixbox.fr/layout"
+      xmlns:listgroup="http://www.lixbox.fr/listgroup"
+      xmlns:out="http://www.lixbox.fr/output"
+      xmlns:in="http://www.lixbox.fr/input"
+      xmlns:graphic="http://www.lixbox.fr/graphic"
+      xmlns:widget="http://www.lixbox.fr/widget"
+    lang="#{i18n.language}">
+    <h:head>        
+    </h:head>
+<h:body>
+    <ui:composition template="/layouts/collapsed-layout.xhtml">
+    <ui:define name="content">
+    <h:form>
+        <grid:row>
+           <grid:col>
+               <div class="page-title-box">
+                   <div class="page-title-right">
+                       <ol class="breadcrumb m-0">
+                           <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                           <li class="breadcrumb-item"><a href="javascript: void(0);">UI Kit</a></li>
+                           <li class="breadcrumb-item active">Buttons</li>
+                       </ol>
+                   </div>
+                   <h4 class="page-title">Buttons</h4>
+               </div>
+           </grid:col>           
+        </grid:row>
+        <grid:row>
+           <grid:col large="6">
+               <card:card>
+                   <card:body>
+                       <h4 class="header-title">Default Buttons</h4>
+                       <p class="text-muted font-14">Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+
+                       <listgroup:buttonsList>
+                           <in:commandButton level="primary" action="#{preview.buttonAction()}" value="Primary" title="Primary"/>
+                           <in:commandButton level="secondary" type="button" value="Secondaryxx" onclick="alert('hello everybody!');" confirmed="true"/>
+                           <in:commandButton level="success" type="button" value="Success"/>
+                           <in:commandButton level="danger" type="button" value="Danger"/>
+                           <in:commandButton level="warning" type="button" value="Warning"/>
+                           <in:commandButton level="info" type="button" value="Info"/>
+                           <in:commandButton level="light" type="button" value="Light"/>
+                           <in:commandButton level="dark" type="button" value="Dark"/>
+                           <in:commandButton level="link" type="button" value="Link"/>
+                       </listgroup:buttonsList>
+
+                       <h4 class="header-title mt-4">Button Bordered</h4>
+                       <p class="text-muted font-14">Use a classes <code>.btn-outline-**</code> to quickly create a bordered buttons.</p>
+
+                       <listgroup:buttonsList>
+                           <in:commandButton bordered="true" level="primary" type="button" value="Primary"/>
+                           <in:commandButton bordered="true" level="secondary" type="button" value="Secondary"/>
+                           <in:commandButton bordered="true" level="success" type="button" value="Success"/>
+                           <in:commandButton bordered="true" level="danger" type="button" value="Danger"/>
+                           <in:commandButton bordered="true" level="warning" type="button" value="Warning"/>
+                           <in:commandButton bordered="true" level="info" type="button" value="Info"/>
+                           <in:commandButton bordered="true" level="light" type="button" value="Light"/>
+                           <in:commandButton bordered="true" level="dark" type="button" value="Dark"/>
+                       </listgroup:buttonsList>
+
+                       <h4 class="header-title mt-4">Button-Rounded</h4>
+                       <p class="text-muted font-14">Add <code>.btn-rounded</code> to default button to get rounded corners.</p>
+
+                       <listgroup:buttonsList>
+                           <in:commandButton rounded="true" level="primary" type="button" value="Primary"/>
+                           <in:commandButton rounded="true" level="secondary" type="button" value="Secondary"/>
+                           <in:commandButton rounded="true" level="success" type="button" value="Success"/>
+                           <in:commandButton rounded="true" level="danger" type="button" value="Danger"/>
+                           <in:commandButton rounded="true" level="warning" type="button" value="Warning"/>
+                           <in:commandButton rounded="true" level="info" type="button" value="Info"/>
+                           <in:commandButton rounded="true" level="light" type="button" value="Light"/>
+                           <in:commandButton rounded="true" level="dark" type="button" value="Dark"/>
+                       </listgroup:buttonsList>
+
+                       <h4 class="header-title mt-4">Button Bordered Rounded</h4>
+                       <p class="text-muted font-14">Use a classes <code>.btn-rounded .btn-outline-**</code> to quickly create a bordered buttons.</p>
+
+                       <listgroup:buttonsList>
+                           <in:commandButton bordered="true" rounded="true" level="primary" type="button" value="Primary"/>
+                           <in:commandButton bordered="true" rounded="true" level="secondary" type="button" value="Secondary"/>
+                           <in:commandButton bordered="true" rounded="true" level="success" type="button" value="Success"/>
+                           <in:commandButton bordered="true" rounded="true" level="danger" type="button" value="Danger"/>
+                           <in:commandButton bordered="true" rounded="true" level="warning" type="button" value="Warning"/>
+                           <in:commandButton bordered="true" rounded="true" level="info" type="button" value="Info"/>
+                           <in:commandButton bordered="true" rounded="true" level="light" type="button" value="Light"/>
+                           <in:commandButton bordered="true" rounded="true" level="dark" type="button" value="Dark"/>
+                       </listgroup:buttonsList>
+
+                       <h4 class="header-title mt-4">Button-Sizes</h4>
+                       <p class="text-muted font-14">
+                           Add <code>.btn-lg</code>, <code>.btn-sm</code> for additional sizes.
+                       </p>
+
+                       <listgroup:buttonsList>
+                           <in:commandButton size="lg" rounded="true" level="primary" type="button" value="Large"/>
+                           <in:commandButton rounded="true" level="info" type="button" value="Normal"/>
+                           <in:commandButton size="sm" rounded="true" level="success" type="button" value="Small"/>
+                       </listgroup:buttonsList>
+
+                       <h4 class="header-title mt-4">Button-Disabled</h4>
+
+                       <p class="text-muted font-14">
+                           Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.
+                       </p>
+
+                       <listgroup:buttonsList>
+                           <in:commandButton styleClass="btn-rounded btn-outline-primary" type="button" value="Primary" disabled="true"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-secondary" type="button" value="Secondary" disabled="true"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-success" type="button" value="Success" disabled="true"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-danger" type="button" value="Danger" disabled="true"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-warning" type="button" value="Warning" disabled="true"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-info" type="button" value="Info" disabled="true"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-light" type="button" value="Light" disabled="true"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-dark" type="button" value="Dark" disabled="true"/>
+                       </listgroup:buttonsList>
+                   </card:body>
+               </card:card>
+           </grid:col>
+
+           <grid:col lg="6">
+               <card:card>
+                   <card:body>
+                       <h4 class="header-title">Icon Button</h4>
+                       <p class="text-muted font-14">
+                           Icon only button.
+                       </p>
+
+                       <listgroup:buttonsList>
+                           <in:commandButton styleClass="btn-rounded btn-outline-primary" type="button" icon="mdi mdi-heart-outline"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-secondary" type="button" icon="mdi mdi-window-close"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-success" type="button" icon="mdi mdi-music"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-danger" type="button" icon="mdi mdi-star"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-warning" type="button" icon="mdi mdi-thumb-up-outline"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-info" type="button" icon="mdi mdi-keyboard"/>
+                           <in:commandButton styleClass="btn-rounded btn-outline-light" type="button" icon="mdi mdi-wrench"/>
+                       </listgroup:buttonsList>
+                       <listgroup:buttonsList styleClass="mt-2">
+                           <in:commandButton styleClass="btn btn-outline-light" type="button" icon="mdi mdi-heart-outline" value="Like"/>
+                           <in:commandButton styleClass="btn btn-warning" type="button" icon="mdi mdi-rocket" value="Launch"/>
+                           <in:commandButton styleClass="btn btn-rounded btn-info" type="button" icon="mdi mdi-cloud" value="Cloud Hosting"/>                           
+                       </listgroup:buttonsList>
+
+                       <h4 class="header-title mt-4">Block Button</h4>
+
+                       <p class="text-muted font-14">
+                           Create block level buttons,with by adding add <code>.btn-block</code>.
+                       </p>
+
+                       <in:commandButton size="sm" bordered="true" display="block" level="primary" type="button" value="Block Button"/>                       
+                       <in:commandButton display="block" styleClass="btn-info" type="button" value="Block Button"/>
+                       <in:commandButton display="block" size="lg" styleClass="btn-rounded btn-success" type="button" value="Block Button"/>
+
+                       <h4 class="header-title mt-4">Button Group</h4>
+
+                       <p class="text-muted font-14">
+                           Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.
+                       </p>
+
+                       <listgroup:buttonsGroup styleClass="mb-2">
+                           <button type="button" class="btn btn-primary">Left</button>
+                           <button type="button" class="btn btn-light">Middle</button>
+                           <button type="button" class="btn btn-light">Right</button>
+                       </listgroup:buttonsGroup>
+
+                       <br/>
+
+                       <listgroup:buttonsGroup styleClass="mb-2">
+                           <button type="button" class="btn btn-light">1</button>
+                           <button type="button" class="btn btn-light">2</button>
+                           <button type="button" class="btn btn-light">3</button>
+                           <button type="button" class="btn btn-light">4</button>
+                       </listgroup:buttonsGroup>
+
+                       <listgroup:buttonsGroup styleClass="mb-2">
+                           <button type="button" class="btn btn-light">5</button>
+                           <button type="button" class="btn btn-light">6</button>
+                           <button type="button" class="btn btn-light">7</button>
+                       </listgroup:buttonsGroup>
+
+                       <listgroup:buttonsGroup styleClass="mb-2">
+                           <button type="button" class="btn btn-light">8</button>
+                       </listgroup:buttonsGroup>
+
+                       <br/>
+
+                       <listgroup:buttonsGroup styleClass="mb-2">
+                           <button type="button" class="btn btn-light">1</button>
+                           <button type="button" class="btn btn-primary">2</button>
+                           <button type="button" class="btn btn-light">3</button>
+                           <in:dropbox level="light" value="Dropdown">
+                               <in:commandButton type="button" value="H Link one"/>                       
+                               <in:commandButton level="link" type="button" value="H Link two"/>                                   
+                           </in:dropbox>
+                       </listgroup:buttonsGroup>
+
+                       <grid:row>
+                           <grid:col medium="3">
+                               <listgroup:buttonsGroup orientation="vertical" styleClass="mb-2">
+                                   <button type="button" class="btn btn-light">Top</button>
+                                   <button type="button" class="btn btn-light">Middle</button>
+                                   <button type="button" class="btn btn-light">Bottom</button>
+                               </listgroup:buttonsGroup>
+                           </grid:col>
+                           <grid:col medium="3">
+                               <listgroup:buttonsGroup orientation="vertical" styleClass="mb-2">
+                                   <button type="button" class="btn btn-light">Button 1</button>
+                                   <button type="button" class="btn btn-light">Button 2</button>
+                                   <in:dropbox level="light" value="Button 3">
+                                       <in:commandButton type="button" value="Link one"/>                       
+                                       <in:commandButton level="link" type="button" value="Link two"/>                                   
+                                   </in:dropbox>
+                               </listgroup:buttonsGroup>
+                           </grid:col>
+                       </grid:row>
+
+                   </card:body>
+               </card:card>
+           </grid:col>
+       </grid:row>
+    </h:form>
+    </ui:define>        
+    </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html 
+    xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:h="http://java.sun.com/jsf/html" 
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core" 
+    xmlns:c="http://java.sun.com/jsp/jstl/core" 
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough" 
+    xmlns:jsf="http://xmlns.jcp.org/jsf" 
+    lang="#{i18n.language}">
+    <h:head>
+    </h:head>
+<h:body>
+    <ui:composition template="/layouts/collapsed-layout.xhtml">
+        <ui:define name="content">
+        <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                <li class="breadcrumb-item active">Report</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">#{reportsControler.reports} Report</h4>
+                    </div>
+                </div>
+            </div>   
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

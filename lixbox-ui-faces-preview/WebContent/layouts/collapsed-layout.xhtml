@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:o="http://omnifaces.org/ui"
+    xmlns:of="http://omnifaces.org/functions"
+	xmlns:layout="http://www.lixbox.fr/layout"
+	xmlns:widget="http://www.lixbox.fr/widget">
+	
+<h:head>    
+   <ui:insert name="head_extension"/>
+</h:head>
+<layout:layout boxed="false" orientation="vertical">
+	<layout:menu>
+		<ui:include src="/commons/vertical-menu.xhtml" />
+	</layout:menu>
+	<layout:navbar>
+		<ui:include src="/commons/navbar.xhtml" />
+	</layout:navbar>
+	<layout:footer>
+		<ui:include src="/commons/footer.xhtml" />
+	</layout:footer>
+	<layout:content>
+		<ui:insert name="content" />
+	</layout:content>
+    <layout:scriptGroup addJquery="false">
+        <ui:insert name="script_extension" />
+    </layout:scriptGroup>
+</layout:layout>
+</html>

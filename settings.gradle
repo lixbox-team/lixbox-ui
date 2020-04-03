@@ -1,0 +1,5 @@
+rootProject.name = 'lixbox-ui'
+
+/** Projet importé */
+include 'lixbox-ui-faces'
+include 'lixbox-ui-faces-preview'
