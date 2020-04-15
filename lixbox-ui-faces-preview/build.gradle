@@ -16,6 +16,16 @@ project(':lixbox-ui-faces-preview'){
         testCompile 'junit:junit:4.12'
 	}
     
+    jar{
+       manifest {
+            attributes(
+                "Implementation-Title": project.name, 
+                "Implementation-Version": archiveVersion, 
+                "Implementation-Timestamp": new Date()
+            )
+        }
+    }
+    
     eclipse{
         project{
             natures 'org.jboss.tools.ws.jaxrs.nature'
@@ -54,15 +64,6 @@ project(':lixbox-ui-faces-preview'){
 		   property "sonar.tests","src/test, src/integTest"
         }
 	}
-    
-    jar{
-        manifest {
-            attributes(
-                "Implementation-Title": project.name, 
-                "Implementation-Version": version, 
-                "Implementation-Timestamp": new Date())
-        }
-    }
     
     smokeTest {
         systemProperty 'service.host', "${config.server.protocol}://${config.server.hostname}:${config.server.port}"
