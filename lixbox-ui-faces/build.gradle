@@ -1,6 +1,5 @@
 project(':lixbox-ui-faces'){    
 	dependencies {     
-
         //lixbox
         compile(group: 'fr.lixbox.lixbox-common', name: 'lixbox-core', version: version_lixbox_common)    
         
@@ -9,13 +8,16 @@ project(':lixbox-ui-faces'){
         compile group: 'org.omnifaces', name: 'omnifaces', version: '3.3'
         
         compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '4.0.3'
-        compileOnly group: 'com.sun.faces', name: 'jsf-impl', version: '2.2.19'
+//        compileOnly group: 'com.sun.faces', name: 'jsf-impl', version: '2.2.20'
+        compileOnly group: 'org.glassfish', name: 'javax.faces', version: '2.4.0'
         compileOnly group: 'jakarta.faces', name: 'jakarta.faces-api', version: '2.3.1'
         
         compileOnly group: 'jakarta.enterprise', name: 'jakarta.enterprise.cdi-api', version: '2.0.2'
         compileOnly group: 'jakarta.inject', name: 'jakarta.inject-api', version: '1.0'
         
-        testCompile 'junit:junit:4.12'
+
+        // ================================ Test ================================
+        testCompile group: 'junit', name:'junit', version: version_junit
 	}
     
     jar{

@@ -1,5 +1,6 @@
 package fr.lixbox.ui.faces.preview.bootstrap.controler;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.enterprise.context.RequestScoped;
@@ -9,9 +10,10 @@ import fr.lixbox.ui.faces.event.SearchEvent;
 
 @Named("helloBean")
 @RequestScoped
-public class HelloBean
+public class HelloBean implements Serializable
 {
-    private String query;
+	private static final long serialVersionUID = 5275438903032538804L;
+	private String query;
 
     
     public String getQuery()

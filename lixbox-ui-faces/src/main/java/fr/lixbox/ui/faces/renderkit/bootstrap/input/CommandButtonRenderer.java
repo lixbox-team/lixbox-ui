@@ -88,7 +88,7 @@ public class CommandButtonRenderer extends CoreRenderer
         Collection<ClientBehaviorContext.Parameter> params = getBehaviorParameters(component);
         if ( !params.isEmpty() && ("submit".equals(type) || BUTTON_ELEMENT.equals(type))) 
         {
-           RenderKitUtils.renderJsfJs(context);
+           RenderKitUtils.renderJsfJsIfNecessary(context);
         }
     }
     
@@ -168,8 +168,7 @@ public class CommandButtonRenderer extends CoreRenderer
                 button, 
                 params,
                 null,
-                false,
-                StringUtil.isNotEmpty(button.getConfirmLabel()));
+                false);
         
         // icon
         if (!StringUtil.isEmpty(icon))

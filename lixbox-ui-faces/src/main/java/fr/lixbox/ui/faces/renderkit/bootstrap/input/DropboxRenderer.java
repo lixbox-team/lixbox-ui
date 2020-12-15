@@ -53,7 +53,7 @@ public class DropboxRenderer extends CoreRenderer
         }
         
         DropboxComponent button = (DropboxComponent) component;
-        RenderKitUtils.renderJsfJs(context);
+        RenderKitUtils.renderJsfJsIfNecessary(context);
         ResponseWriter writer = context.getResponseWriter();
         String clientId = button.getClientId(context);
         Object value = button.getValue();
