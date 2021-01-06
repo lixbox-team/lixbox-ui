@@ -23,8 +23,9 @@ import javax.faces.context.FacesContext;
 import javax.faces.validator.FacesValidator;
 import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
+
+import jakarta.mail.internet.AddressException;
+import jakarta.mail.internet.InternetAddress;
 
 /**
  * Ce validator verifie les adresses email
