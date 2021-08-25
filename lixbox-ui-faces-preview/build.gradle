@@ -3,7 +3,7 @@ project(':lixbox-ui-faces-preview'){
     
 	dependencies {             
 	    //project
-        compile project(':lixbox-ui-faces')
+        api project(':lixbox-ui-faces')
         
         //divers
         compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '4.0.3'
@@ -15,7 +15,7 @@ project(':lixbox-ui-faces-preview'){
         
 
         // ================================ Test ================================
-//        testCompile group: 'junit', name:'junit', version: version_junit
+        testImplementation group: 'junit', name:'junit', version: version_junit
 	}
     
     jar{
@@ -66,12 +66,7 @@ project(':lixbox-ui-faces-preview'){
 		   property "sonar.tests","src/test, src/integTest"
         }
 	}
-    
-    smokeTest {
-        systemProperty 'service.host', "${config.server.protocol}://${config.server.hostname}:${config.server.port}"
-        systemProperty 'service.uri', "${config.desc_project.uri.ui}"
-    }
-    
+	
     war {
         from 'WebContent'
         classpath fileTree('WebContent/WEB-INF/lib')
