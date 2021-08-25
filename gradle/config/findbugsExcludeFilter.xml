@@ -7,6 +7,12 @@
         <Bug code="OBL" />
     </Match>
     <Match>
+        <Bug code="EI" />
+    </Match>
+    <Match>
+        <Bug code="EI2" />
+    </Match>
+    <Match>
         <Field name="wireMockRule" />
         <Bug code="UrF" />
     </Match>
